@@ -1,4 +1,11 @@
-import Dashboard from "../components/Dashboard";
+"use client";
+import dynamic from "next/dynamic";
+
+const Dashboard = dynamic(
+    () => import("../components/Dashboard"),
+    { ssr: false }
+);
+
 
 export default function Page() {
     return (
@@ -25,7 +32,6 @@ export default function Page() {
                 </h1>
 
                 <p className="mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-slate-400 font-mono border-l-2 border-emerald-400/30 pl-4">
-                    {/* Terminal-style comment */}
                     <span className="text-slate-600">#</span> Welcome to KernelBoard, your real-time system monitoring dashboard
                     <span className="block mt-1 text-xs text-slate-500">
                         Tracking CPU, Memory, Uptime & Load Average • Live updates every 2s
@@ -38,10 +44,10 @@ export default function Page() {
                         ● LIVE
                     </span>
                     <span className="px-3 py-1.5 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300">
-                        🐧 Linux 7.0-rc1
+                        🐧 Linux
                     </span>
                     <span className="px-3 py-1.5 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300">
-                        🔷 Go 1.26
+                        🔷 Go
                     </span>
                     <span className="px-3 py-1.5 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300">
                         ⚡ Real-time

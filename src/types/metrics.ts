@@ -11,8 +11,8 @@ export interface MemoryStats {
 }
 
 export interface UptimeStats {
-    uptimeseconds: number;
-    uptimehours: number;
+    uptime_seconds: number;
+    uptime_hours: number;
 }
 
 export interface LoadStats {
@@ -20,4 +20,11 @@ export interface LoadStats {
     load5: number;
     load15: number;
     cores: number;
+}
+
+export interface SystemStats {
+    hostname: string;
+    kernel_version: string;
+    architecture: string;
+    go_version: string;
 }

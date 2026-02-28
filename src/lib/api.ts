@@ -31,3 +31,11 @@ export async function getLoad() {
     }
     return response.json();
 }
+
+export async function getSystem() {
+    const response = await fetch(`${BASE_URL}/system`);
+    if (!response.ok) {
+        throw new Error(`System stats error! status: ${response.status}`);
+    }
+    return response.json();
+}
