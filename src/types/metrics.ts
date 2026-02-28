@@ -4,7 +4,27 @@ export interface CPUStats {
 }
 
 export interface MemoryStats {
-    total: string;
-    free: string;
-    usage_percent: string
+    total_gb: number;
+    used_gb: number,
+    free_gb: number;
+    usage_percent: number
+}
+
+export interface DiskStats {
+    total_gb: number;
+    used_gb: number,
+    free_gb: number;
+    usage_percent: number
+}
+
+export interface UptimeStats {
+    uptime_seconds: number;
+    uptime_hours: number;
+}
+
+export interface LoadStats {
+    load1: number;
+    load5: number;
+    load15: number;
+    cores: number;
 }
