@@ -16,14 +16,6 @@ export async function getMemory() {
     return response.json();
 }
 
-export async function getDisk() {
-    const response = await fetch(`${BASE_URL}/disk`);
-    if (!response.ok) {
-        throw new Error(`Disk stats error! status: ${response.status}`);
-    }
-    return response.json();
-}
-
 export async function getUptime() {
     const response = await fetch(`${BASE_URL}/uptime`);
     if (!response.ok) {

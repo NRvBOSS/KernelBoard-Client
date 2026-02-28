@@ -10,16 +10,9 @@ export interface MemoryStats {
     usage_percent: number
 }
 
-export interface DiskStats {
-    total_gb: number;
-    used_gb: number,
-    free_gb: number;
-    usage_percent: number
-}
-
 export interface UptimeStats {
-    uptime_seconds: number;
-    uptime_hours: number;
+    uptimeseconds: number;
+    uptimehours: number;
 }
 
 export interface LoadStats {
